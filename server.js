@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const hostname = '127.0.0.1';
 dotenv.config({ path: './config/config.env' })
 
-const connectDatabase = require('./mysqlconnect.js');
+const connectDatabase = require('./db/mysqlconnect.js');
 connectDatabase();
 
 const books = require('./routes/books');
