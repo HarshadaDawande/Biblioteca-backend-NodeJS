@@ -2,17 +2,18 @@
   "name": "biblioteca-nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server",
-    "prod": "SET NODE_ENV=production & nodemon server.js"
+    "start": "node app.js",
+    "dev": "nodemon app",
+    "prod": "SET NODE_ENV=production & nodemon app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "joi": "^17.7.1",
     "mysql": "^2.18.1",
     "mysql2": "^3.1.2",
     "pg": "^8.9.0",
