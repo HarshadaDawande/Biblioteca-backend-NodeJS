@@ -7,5 +7,10 @@ const connection = createConnection({
     port: '3306',
     connectionLimit: 10
 });
-
+connection.connect(function (err) {
+    if (err) {
+        return console.log(err)
+    }
+    console.log(`Database Connected`)
+})
 module.exports = connection;

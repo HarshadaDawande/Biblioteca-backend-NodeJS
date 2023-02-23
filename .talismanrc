@@ -1,8 +1,8 @@
 fileignoreconfig:
 - filename: config/config.env
   checksum: 7195cb371987d107e3b2ccc7a3816590a8020e04ab11d388afe5aa6df1e735fa
-- filename: package-lock.json
-  checksum: 8979db8dd07b820403fafb1b0745909c585dac07e9698c37ed553afa10b9a9b7
 - filename: db/mysqlconnect.js
   checksum: 6b138e5150af41ad3bcc855ac68a74da18a38c4f650928ed129c3368bebfb4f2  
+- filename: package-lock.json
+  checksum: 5d71b4c6dd700c78e4475eb2bb2b7d60ad16e886d3d0076b210018d95e520eb4
 version: ""

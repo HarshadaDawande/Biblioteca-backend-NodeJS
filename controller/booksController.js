@@ -45,3 +45,14 @@ exports.getBook = (request, response, next) => {
         return;
     });
 }
+exports.createBook = (request, response, next) => {
+    const query = "INSERT into books (`isbn`, `author`, `title`, `publisher`, `year_of_publication`, `status`) VALUES (?,?,?,?,?,?)";
+    const values = request.body;
+    connection.query(query, values, (error, results, fields) => {
+        if (error) {
+            throw error;
+        }
+        response.status(201).json("Book is created");
+        return;
+    });
+}
