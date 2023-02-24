@@ -1,13 +1,14 @@
 const express = require('express');
-const app = express();
+require('./db/mongoose');
 
+const app = express();
+const bookRouter = require('./routes/book_router')
+
+app.use(express.json());
+app.use(bookRouter);
 
 const dotenv = require('dotenv');
 dotenv.config({ path: './config/config.env' })
-
-const books = require('./routes/books');
-app.use(books);
-
 const port = process.env.PORT || 3000;
 const hostname = '127.0.0.1';
 app.listen(port, hostname, () => {
