@@ -1,8 +1,9 @@
 const express = require('express');
 const Book = require('../model/book');
 const router = express.Router();
+const auth = require('../middleware/auth');
 
-router.get('/test', (req, res) => {
+router.get('/test', auth, (req, res) => {
     res.send('This is from other router');
 });
 
